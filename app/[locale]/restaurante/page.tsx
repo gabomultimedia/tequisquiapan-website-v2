@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Phone, Clock, MapPin, Users, Calendar, ChefHat } from "lucide-react";
+import { Phone, Clock, UtensilsCrossed, Wine, FileText, ArrowUpRight, ChefHat } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Restaurante | Cocina que acompaña momentos",
@@ -16,6 +16,19 @@ const features = [
   "Eventos privados y grupos corporativos",
   "Reservaciones para cumpleaños y aniversarios",
   "Servicio de catering disponible",
+];
+
+const menuLinks = [
+  {
+    label: "Carta de Alimentos",
+    href: "https://bit.ly/CartaClubTx",
+    icon: UtensilsCrossed,
+  },
+  {
+    label: "Carta de Bebidas",
+    href: "https://bit.ly/BebidasClubTx",
+    icon: Wine,
+  },
 ];
 
 const schedule = [
@@ -130,6 +143,36 @@ export default function RestaurantePage() {
                 <span className="text-[#1A1A1A]/80">{feature}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Menu Links */}
+      <section className="py-16 bg-[#FAF8F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#0A3622] mb-4">
+            Conoce nuestro menú
+          </h2>
+          <p className="text-[#1A1A1A]/70 mb-10 max-w-2xl mx-auto">
+            Explora nuestra selección de platillos y bebidas cuidadosamente preparados para ti.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            {menuLinks.map((menu) => {
+                const IconComponent = menu.icon;
+                return (
+                  <a
+                    key={menu.label}
+                    href={menu.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-3 bg-[#0A3622] hover:bg-[#14512D] text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl"
+                  >
+                    <IconComponent className="w-6 h-6" />
+                    <span>{menu.label}</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                );
+              })}
           </div>
         </div>
       </section>

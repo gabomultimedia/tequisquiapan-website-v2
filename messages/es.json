@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "golf": "Golf",
+    "restaurant": "Restaurante",
+    "racquet": "Raqueta",
+    "membership": "Membresías",
+    "greenFees": "Green Fees",
+    "tournaments": "Torneos",
+    "contact": "Contacto",
+    "becomeMember": "Hazte Miembro"
+  },
+  "hero": {
+    "welcome": "Bienvenido al",
+    "title": "Club de Golf\nTequisquiapan",
+    "subtitle": "Donde cada amanecer trae fairways suaves y cada atardecer cuenta una nueva historia.",
+    "cta1": "Descubre tu Membresía",
+    "cta2": "Jugar en el Campo"
+  },
+  "stats": {
+    "years": "50+",
+    "yearsLabel": "Años de historias",
+    "holes": "18",
+    "holesLabel": "Hoyos que contar",
+    "yards": "6,906",
+    "yardsLabel": "Yardas de recuerdos",
+    "founded": "1977",
+    "foundedLabel": "Tradición viva"
+  },
+  "club": {
+    "about": "Nuestra Historia",
+    "title": "Medio siglo de momentos que no se pueden comprar",
+    "description1": "Desde 1977, este campo ha sido testigo de bodas, aniversarios, negocios cerrados y amistades forjadas bajo el sol de Tequisquiapan. Cada fairway guarda memorias de vidas que encontraron su ritmo aquí.",
+    "description2": "Joe Finger no solo diseñó 18 hoyos: creó un santuario donde el tiempo se detiene y el alma encuentra su espacio. Rodeado de árboles que eran antiguos cuando nosotros éramos jóvenes.",
+    "location": "Tequisquiapan, Qro.",
+    "phone": "+414 273 00 95",
+    "schedule": "Mi-Lu: 7AM - 6PM",
+    "slope": "Slope 124 | Rating 71.1",
+    "foundedYear": "1977",
+    "foundedLabel": "Año de fundación"
+  },
+  "experiences": {
+    "title": "Vive el Club",
+    "subtitle": "Más que un campo. Un estilo de vida.",
+    "golf": {
+      "title": "Campo de Golf",
+      "description": "Fairways que han besado la mañana por 50 años. Donde el silencio dice más que las palabras.",
+      "cta": "Explorar"
+    },
+    "restaurant": {
+      "title": "Restaurante",
+      "description": "Desayunos con luz dorada, almuerzos que alargan la conversación, cenas bajo las estrellas.",
+      "cta": "Explorar"
+    },
+    "racquet": {
+      "title": "Club Raqueta",
+      "description": "Movimiento, risas y el sonido de pelotas que cruzan la red. Para toda la familia.",
+      "cta": "Explorar"
+    }
+  },
+  "membership": {
+    "title": "Membresías",
+    "subtitle": "Tu llave a medio siglo de historias",
+    "description": "No es solo acceso al campo. Es pertenecer a una familia que ha hecho de este lugar su refugio.",
+    "popular": "Más Popular",
+    "pricePerMonth": "/mes",
+    "viewDetails": "Ver Detalles",
+    "viewAll": "Ver todas las membresías",
+    "plans": {
+      "personal": {
+        "name": "Personal",
+        "price": "$9,333",
+        "features": ["Acceso ilimitado al campo", "Invita a un amigo cada mes", "Descuentos en restaurante"]
+      },
+      "familiar": {
+        "name": "Familiar",
+        "price": "$11,830",
+        "features": ["Tu familia, siempre bienvenida", "Eventos que crean recuerdos", "Tradiciones que se heredan"]
+      },
+      "corporate": {
+        "name": "Empresarial",
+        "price": "$24,000",
+        "features": ["Tu equipo, tu campo", "Salón privado para cerrar acuerdos", "Torneos que unen empresas"]
+      }
+    }
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Momentos que no se pueden describir"
+  },
+  "cta": {
+    "title": "Tu lugar entre los árboles espera",
+    "description": "No es solo golf. Es el sonido del viento entre los pinos, el aroma del pasto recién cortado, la risa de tus hijos aprendiendo a jugar. Es tu mundo.",
+    "button1": "Visítanos",
+    "button2": "Reservar Ahora"
+  },
+  "golf": {
+    "title": "Campo de Golf | 18 Hoyos Par 72",
+    "heroTitle": "18 Hoyos,\n50 Años de Historias",
+    "heroSubtitle": "Fairways suaves como seda, greens rápidos como el viento. Joe Finger diseñó un campo que desafía la lógica del tiempo.",
+    "courseStats": {
+      "holes": "18",
+      "holesLabel": "Hoyos",
+      "par": "72",
+      "parLabel": "Par",
+      "yards": "6,906",
+      "yardsLabel": "Yardas",
+      "slope": "124",
+      "slopeLabel": "Slope"
+    },
+    "aboutTitle": "Un diseño que desafía al tiempo",
+    "aboutText1": "Joe Finger no construyó un campo de golf. Creó un santuario donde cada golpe cuenta una historia diferente. Desde 1975, estos fairways han visto amaneceres, celebridades, y momentos que cambiaron vidas.",
+    "aboutText2": "Con un slope de 124 y rating de 71.1, el campo atrae a quienes buscan algo más que un juego: buscan una experiencia que recuerden toda su vida.",
+    "features": [
+      "Diseñado por Joe Finger en 1975",
+      "Kikuyo Grass: fairways suaves como terciopelo",
+      "Bent Grass: greens que desafían la gravedad",
+      "Driving range para calentar el alma",
+      "Pro shop con el mejor equipamiento",
+      "Instructores certificados que hablan tu idioma",
+      "Carts eléctricos para recorrer con estilo",
+      "Caddies con conocimiento del campo"
+    ],
+    "testimonialsTitle": "Lo que dicen quienes han vivido el campo",
+    "cta": {
+      "title": "Tu próxima ronda te está esperando",
+      "description": "Llámanos y te contamos qué hace a este campo diferente. Sin compromiso.",
+      "button1": "Ver Green Fees",
+      "button2": "+414 273 00 95"
+    }
+  },
+  "footer": {
+    "navigation": "Navegación",
+    "schedule": "Horarios",
+    "scheduleDetail": "Miércoles - Lunes: 7:00 AM - 6:00 PM",
+    "closed": "* Cerrado los martes",
+    "contact": "Contacto",
+    "copyright": "© Club de Golf Tequisquiapan. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones"
+  },
+  "contact": {
+    "title": "Contacto",
+    "heroTitle": "Estamos para ti",
+    "heroSubtitle": "Cada pregunta es el comienzo de una historia. Contáctanos y descubre tu lugar en el club.",
+    "infoTitle": "Información de contacto",
+    "formTitle": "Envíanos un mensaje",
+    "sendMessage": "Enviar mensaje",
+    "sending": "Enviando...",
+    "name": "Nombre completo",
+    "email": "Email",
+    "phone": "Teléfono",
+    "interest": "¿Qué te trae al club?",
+    "message": "Mensaje",
+    "followUs": "Síguenos"
+  }
+}

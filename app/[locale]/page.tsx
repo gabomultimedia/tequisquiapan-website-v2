@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Flag, Utensils, Trophy, MapPin, Phone, Clock, ChevronRight, Star } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { HeroSlider } from "@/components/hero-slider";
 
 const experiences = [
   {
@@ -8,7 +10,7 @@ const experiences = [
     description:
       "18 hoyos Par 72, 6,906 yardas. Diseñado por Joe Finger en 1975. Kikuyo en fairways, Bent Grass en greens.",
     icon: Flag,
-    image: "/images/media/golf-landscape.webp",
+    image: "/images/media/golf-green.webp",
     href: "/golf",
   },
   {
@@ -16,7 +18,7 @@ const experiences = [
     description:
       "Cocina que acompaña momentos. Desayunos en terraza, almuerzos entre amigos, cenas con vista.",
     icon: Utensils,
-    image: "/images/media/restaurant-interior-1.webp",
+    image: "/images/media/food-complete.webp",
     href: "/restaurante",
   },
   {
@@ -24,7 +26,7 @@ const experiences = [
     description:
       "2 canchas de tenis, pádel, pickleball y alberca. Academia MATX POINT para clases profesionales.",
     icon: Trophy,
-    image: "/images/media/tennis-1.webp",
+    image: "/images/media/tennis-2.webp",
     href: "/raqueta",
   },
 ];
@@ -69,54 +71,22 @@ const galleryImages = [
   "/images/gallery/gallery-10109.webp",
 ];
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations();
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero/hero-img-1.webp"
-            alt="Club de Golf Tequisquiapan"
-            fill
-            priority
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A3622]/70 via-[#0A3622]/50 to-[#0A3622]/80" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#D4A84B] tracking-[0.3em] uppercase text-sm mb-4">
-            Bienvenido al
-          </p>
-          <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-            Club de Golf<br />Tequisquiapan
-          </h1>
-          <p className="text-white/90 text-xl md:text-2xl max-w-2xl mx-auto mb-10 font-light">
-            Un lugar donde el Golf, la Naturaleza y el Tiempo se encuentran.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/membresias"
-              className="bg-[#D4A84B] hover:bg-[#c49a3f] text-[#0A3622] font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:shadow-xl hover:shadow-[#D4A84B]/30"
-            >
-              Conocer Membresías
-            </Link>
-            <Link
-              href="/golf"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#0A3622] font-semibold px-8 py-4 rounded-lg text-lg transition-all"
-            >
-              Ver Campo de Golf
-            </Link>
-          </div>
-        </div>
-
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
-            <div className="w-1.5 h-3 bg-white/50 rounded-full" />
-          </div>
-        </div>
-      </section>
+      {/* Hero Section with Ken Burns Slider */}
+      <HeroSlider
+        locale={locale}
+        welcome={t("hero.welcome")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+        cta1={t("hero.cta1")}
+        cta2={t("hero.cta2")}
+      />
 
       {/* Stats Section */}
       <section className="bg-[#0A3622] py-16">
@@ -212,7 +182,7 @@ export default function HomePage() {
               return (
                 <Link
                   key={index}
-                  href={exp.href}
+                  href={`/${locale}${exp.href}`}
                   className="group relative overflow-hidden rounded-2xl bg-[#FAF8F5] hover:shadow-2xl transition-all duration-300"
                 >
                   <div className="aspect-[4/3] relative overflow-hidden">
@@ -304,7 +274,7 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <Link
-                  href="/membresias"
+                  href={`/${locale}/membresias`}
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all ${
                     membership.highlight
                       ? "bg-[#0A3622] text-white hover:bg-[#14512D]"
@@ -319,7 +289,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              href="/membresias"
+              href={`/${locale}/membresias`}
               className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
             >
               Ver todas las membresías <ChevronRight className="w-4 h-4" />
@@ -373,14 +343,14 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contacto"
+              href={`/${locale}/contacto`}
               className="bg-[#0A3622] hover:bg-[#14512D] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:shadow-xl"
             >
               <Phone className="w-5 h-5 inline mr-2" />
               Contactar Ahora
             </Link>
             <Link
-              href="/green-fees"
+              href={`/${locale}/green-fees`}
               className="border-2 border-[#0A3622] text-[#0A3622] hover:bg-[#0A3622] hover:text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all"
             >
               Reservar Green Fee

@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Home",
+    "golf": "Golf",
+    "restaurant": "Restaurant",
+    "racquet": "Racquet",
+    "membership": "Membership",
+    "greenFees": "Green Fees",
+    "tournaments": "Tournaments",
+    "contact": "Contact",
+    "becomeMember": "Become a Member"
+  },
+  "hero": {
+    "welcome": "Welcome to the",
+    "title": "Tequisquiapan\nGolf Club",
+    "subtitle": "Where every sunrise brings soft fairways and every sunset tells a new story.",
+    "cta1": "Discover Your Membership",
+    "cta2": "Play the Course"
+  },
+  "stats": {
+    "years": "50+",
+    "yearsLabel": "Years of stories",
+    "holes": "18",
+    "holesLabel": "Holes to tell",
+    "yards": "6,906",
+    "yardsLabel": "Yards of memories",
+    "founded": "1977",
+    "foundedLabel": "Living tradition"
+  },
+  "club": {
+    "about": "Our Story",
+    "title": "Half a century of moments you cannot buy",
+    "description1": "Since 1977, this course has witnessed weddings, anniversaries, deals closed, and friendships forged under the sun of Tequisquiapan. Every fairway holds memories of lives that found their rhythm here.",
+    "description2": "Joe Finger didn't just design 18 holes: he created a sanctuary where time stands still and the soul finds its space. Surrounded by trees that were ancient when we were young.",
+    "location": "Tequisquiapan, Qro.",
+    "phone": "+414 273 00 95",
+    "schedule": "Wed-Mon: 7AM - 6PM",
+    "slope": "Slope 124 | Rating 71.1",
+    "foundedYear": "1977",
+    "foundedLabel": "Year founded"
+  },
+  "experiences": {
+    "title": "Live the Club",
+    "subtitle": "More than a course. A way of life.",
+    "golf": {
+      "title": "Golf Course",
+      "description": "Fairways that have kissed the morning for 50 years. Where silence says more than words.",
+      "cta": "Explore"
+    },
+    "restaurant": {
+      "title": "Restaurant",
+      "description": "Breakfasts with golden light, lunches that lengthen conversation, dinners under the stars.",
+      "cta": "Explore"
+    },
+    "racquet": {
+      "title": "Racquet Club",
+      "description": "Movement, laughter, and the sound of balls crossing the net. For the whole family.",
+      "cta": "Explore"
+    }
+  },
+  "membership": {
+    "title": "Memberships",
+    "subtitle": "Your key to half a century of stories",
+    "description": "It's not just course access. It's belonging to a family that has made this place their refuge.",
+    "popular": "Most Popular",
+    "pricePerMonth": "/month",
+    "viewDetails": "View Details",
+    "viewAll": "View all memberships",
+    "plans": {
+      "personal": {
+        "name": "Personal",
+        "price": "$9,333",
+        "features": ["Unlimited course access", "Bring a friend every month", "Restaurant discounts"]
+      },
+      "familiar": {
+        "name": "Family",
+        "price": "$11,830",
+        "features": ["Your family, always welcome", "Events that create memories", "Traditions to be passed down"]
+      },
+      "corporate": {
+        "name": "Corporate",
+        "price": "$24,000",
+        "features": ["Your team, your course", "Private lounge to close deals", "Tournaments that unite companies"]
+      }
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Moments that cannot be described"
+  },
+  "cta": {
+    "title": "Your place among the trees is waiting",
+    "description": "It's not just golf. It's the sound of wind through the pines, the aroma of freshly cut grass, the laughter of your children learning to play. It's your world.",
+    "button1": "Visit Us",
+    "button2": "Book Now"
+  },
+  "golf": {
+    "title": "Golf Course | 18 Holes Par 72",
+    "heroTitle": "18 Holes,\n50 Years of Stories",
+    "heroSubtitle": "Fairways soft as silk, greens fast as wind. Joe Finger designed a course that defies the laws of time.",
+    "courseStats": {
+      "holes": "18",
+      "holesLabel": "Holes",
+      "par": "72",
+      "parLabel": "Par",
+      "yards": "6,906",
+      "yardsLabel": "Yards",
+      "slope": "124",
+      "slopeLabel": "Slope"
+    },
+    "aboutTitle": "A design that defies time",
+    "aboutText1": "Joe Finger didn't build a golf course. He created a sanctuary where every shot tells a different story. Since 1975, these fairways have witnessed sunrises, celebrities, and moments that changed lives.",
+    "aboutText2": "With a slope of 124 and rating of 71.1, the course draws those seeking more than a game: they seek an experience they will remember for a lifetime.",
+    "features": [
+      "Designed by Joe Finger in 1975",
+      "Kikuyo Grass: fairways soft as velvet",
+      "Bent Grass: greens that defy gravity",
+      "Driving range to warm up the soul",
+      "Pro shop with the best equipment",
+      "Certified instructors who speak your language",
+      "Electric carts to ride in style",
+      "Caddies who know every corner"
+    ],
+    "testimonialsTitle": "What those who have lived the course say",
+    "cta": {
+      "title": "Your next round is waiting for you",
+      "description": "Call us and discover what makes this course different. No commitment.",
+      "button1": "View Green Fees",
+      "button2": "+414 273 00 95"
+    }
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "schedule": "Hours",
+    "scheduleDetail": "Wednesday - Monday: 7:00 AM - 6:00 PM",
+    "closed": "* Closed Tuesdays",
+    "contact": "Contact",
+    "copyright": "© Club de Golf Tequisquiapan. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions"
+  },
+  "contact": {
+    "title": "Contact",
+    "heroTitle": "We're here for you",
+    "heroSubtitle": "Every question is the beginning of a story. Contact us and discover your place at the club.",
+    "infoTitle": "Contact information",
+    "formTitle": "Send us a message",
+    "sendMessage": "Send message",
+    "sending": "Sending...",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "interest": "What brings you to the club?",
+    "message": "Message",
+    "followUs": "Follow us"
+  }
+}
