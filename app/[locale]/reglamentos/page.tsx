@@ -165,7 +165,7 @@ export default function ReglamentosPage() {
       <section className="py-16 bg-[#F7F2E6]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-playfair text-3xl font-bold text-[#0A3622] mb-8 text-center">
-            Reglamento Tenis y Pádel
+            Reglamento Tenis
           </h2>
           <Accordion className="w-full">
             {tennisRules.map((rule, index) => (

@@ -4,9 +4,9 @@ import { Metadata } from "next";
 import { Phone, MapPin, Clock, Users, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Club Raqueta | Tenis, Pádel y Pickleball",
+  title: "Club Raqueta | Tenis",
   description:
-    "Club Raqueta del Club de Golf Tequisquiapan. 2 canchas de tenis, pádel, pickleball, alberca y gimnasio. Academia MATX POINT para clases profesionales.",
+    "Club Raqueta del Club de Golf Tequisquiapan. 2 canchas de tenis con iluminación. Academia MATX POINT para clases profesionales.",
 };
 
 const activities = [
@@ -16,27 +16,10 @@ const activities = [
       "2 canchas de tenis de primera calidad con iluminación para juego nocturno. Academia MATX POINT para clases de todos los niveles.",
     image: "/images/media/tennis-1.webp",
   },
-  {
-    title: "Pádel",
-    description:
-      "Canchas de pádel profesionales en un ambiente familiar. Perfecto para amigos y familias que buscan diversión y ejercicio.",
-    image: "/images/media/tennis-2.webp",
-  },
-  {
-    title: "Pickleball",
-    description:
-      "El deporte de más rápido crecimiento en México. Fácil de aprender y divertido para todas las edades.",
-    image: "/images/media/tennis-3.webp",
-  },
 ];
 
 const facilities = [
-  "2 canchas de tenis con iluminación",
-  "Canchas de pádel",
-  "Canchas de pickleball",
-  "Alberca semiolímpica",
   "Gimnasio equipado",
-  "Vestidores con regaderas",
   "Área de descanso",
   "Academia MATX POINT",
 ];
@@ -64,8 +47,8 @@ export default function RaquetaPage() {
             Movimiento,<br />salud y diversión
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Más allá del golf, descubre un mundo de actividades para toda la familia.
-            Tenis, pádel, pickleball y más.
+            Más allá del golf, disfruta de canchas de tenis profesionales con iluminación
+            para juego nocturno y la Academia MATX POINT.
           </p>
         </div>
       </section>
@@ -78,8 +61,8 @@ export default function RaquetaPage() {
               Actividades para todos
             </h2>
             <p className="text-[#1A1A1A]/70 text-lg max-w-2xl mx-auto">
-              Desde el tenis tradicional hasta el nuevo fenómeno del pickleball,
-              tenemos actividades para cada miembro de la familia.
+              Canchas de tenis profesionales con iluminación para juego nocturno.
+              Academia MATX POINT para clases de todos los niveles.
             </p>
           </div>
 

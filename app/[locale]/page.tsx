@@ -24,9 +24,9 @@ const experiences = [
   {
     title: "Club Raqueta",
     description:
-      "2 canchas de tenis, pádel, pickleball y alberca. Academia MATX POINT para clases profesionales.",
+      "2 canchas de tenis con iluminación. Academia MATX POINT para clases profesionales.",
     icon: Trophy,
-    image: "/images/media/tennis-2.webp",
+    image: "/images/media/tennis-1.webp",
     href: "/raqueta",
   },
 ];

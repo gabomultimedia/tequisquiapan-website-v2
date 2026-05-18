@@ -37,10 +37,9 @@ const greenFees = [
 
 const extras = [
   { name: "Renta de carro (18 hoyos)", price: "$700 MXN" },
-  { name: "Renta de carro (9 hoyos)", price: "$400 MXN" },
   { name: "Cuota de caddie", price: "$500 MXN" },
   { name: "Uso de Tee de Práctica", price: "Incluido" },
-  { name: "Alquiler de palos", price: "$600 MXN" },
+  { name: "Bolas tee de práctica", price: "Desde $50 MXN" },
 ];
 
 const promotions = [
@@ -49,18 +48,6 @@ const promotions = [
     description:
       "Jugadores que validate su membrecía vigente reciben green fee gratis para su invitado.",
     icon: Gift,
-  },
-  {
-    title: "Twilight Rate",
-    description:
-      "Salida después de las 3PM con 40% de descuento en green fee.",
-    icon: Clock,
-  },
-  {
-    title: "Grupo Corporativo",
-    description:
-      "Para grupos de 8+ personas, contacta directamente para tarifas especiales.",
-    icon: Calendar,
   },
 ];
 

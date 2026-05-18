@@ -12,10 +12,8 @@ export const metadata: Metadata = {
 const features = [
   "Terraza con vista al campo de golf",
   "Menú de temporada actualizado regularmente",
-  "Chef ejecutivo con más de 15 años de experiencia",
   "Eventos privados y grupos corporativos",
   "Reservaciones para cumpleaños y aniversarios",
-  "Servicio de catering disponible",
 ];
 
 const menuLinks = [
@@ -81,24 +79,14 @@ export default function RestaurantePage() {
               </p>
               <p className="text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
                 Ya sea que busques un desayuno tranquilo con vista al campo, una comida
-                de negocios en nuestro salón privado, o una cena romántica bajo las
-                estrellas, nuestro equipo está listo para hacer de tu visita un momento
-                especial.
+                de negocios, o una cena romántica bajo las estrellas, nuestro equipo
+                está listo para hacer de tu visita un momento especial.
               </p>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-[#D4A84B] rounded-full flex items-center justify-center">
-                  <ChefHat className="w-6 h-6 text-[#0A3622]" />
-                </div>
-                <div>
-                  <p className="font-semibold text-[#0A3622]">Chef Emmanuel</p>
-                  <p className="text-sm text-[#1A1A1A]/60">Chef Ejecutivo</p>
-                </div>
-              </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Image
-                src="/images/media/restaurant-interior-1.webp"
-                alt="Interior del restaurante"
+                src="/images/media/restaurant-new-main.jpeg"
+                alt="Restaurante principal del Club de Golf Tequisquiapan"
                 width={300}
                 height={200}
                 className="rounded-xl shadow-lg"
