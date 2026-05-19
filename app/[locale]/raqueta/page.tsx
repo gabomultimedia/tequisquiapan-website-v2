@@ -6,14 +6,14 @@ import { Phone, MapPin, Clock, Users, ChevronRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Club Raqueta | Tenis",
   description:
-    "Club Raqueta del Club de Golf Tequisquiapan. 2 canchas de tenis con iluminación. Academia MATX POINT para clases profesionales.",
+    "Club Raqueta del Club de Golf Tequisquiapan. 2 canchas de tenis. Academia MATX POINT para clases profesionales.",
 };
 
 const activities = [
   {
     title: "Tenis",
     description:
-      "2 canchas de tenis de primera calidad con iluminación para juego nocturno. Academia MATX POINT para clases de todos los niveles.",
+      "2 canchas de tenis de primera calidad. Academia MATX POINT para clases de todos los niveles.",
     image: "/images/media/tennis-1.webp",
   },
 ];
@@ -47,8 +47,7 @@ export default function RaquetaPage() {
             Movimiento,<br />salud y diversión
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Más allá del golf, disfruta de canchas de tenis profesionales con iluminación
-            para juego nocturno y la Academia MATX POINT.
+            Más allá del golf, disfruta de canchas de tenis profesionales y la Academia MATX POINT.
           </p>
         </div>
       </section>
@@ -61,8 +60,7 @@ export default function RaquetaPage() {
               Actividades para todos
             </h2>
             <p className="text-[#1A1A1A]/70 text-lg max-w-2xl mx-auto">
-              Canchas de tenis profesionales con iluminación para juego nocturno.
-              Academia MATX POINT para clases de todos los niveles.
+              Canchas de tenis profesionales. Academia MATX POINT para clases de todos los niveles.
             </p>
           </div>
 
