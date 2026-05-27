@@ -67,7 +67,6 @@ const juniorMembership = {
   ageRange: "22-30 años",
   features: [
     "Acceso ilimitado al campo",
-    "Green fees preferenciales (25%)",
     "Acceso a gimnasio y alberca",
   ],
 };
