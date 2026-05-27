@@ -19,7 +19,7 @@ const memberships = [
       "Acceso ilimitado al campo de golf",
       "Green fees preferenciales (30% descuento)",
       "Acceso a gimnasio y alberca",
-          ],
+    ],
     highlight: false,
   },
   {
@@ -43,7 +43,6 @@ const memberships = [
     features: [
       "Todo lo incluido en Pareja",
       "Cónyuge + hijos menores 21 años",
-      "Descuentos en restaurante (25%)",
     ],
     highlight: true,
   },
