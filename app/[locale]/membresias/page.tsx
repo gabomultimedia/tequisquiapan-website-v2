@@ -18,10 +18,8 @@ const memberships = [
     features: [
       "Acceso ilimitado al campo de golf",
       "Green fees preferenciales (30% descuento)",
-      "Acceso a健身房 y alberca",
-      "1 invitación mensual a invitado",
-      "Participación en torneos mensuales",
-    ],
+      "Acceso a gimnasio y alberca",
+          ],
     highlight: false,
   },
   {
@@ -29,12 +27,10 @@ const memberships = [
     price: "$10,430",
     period: "mensual",
     inscription: "$100,000",
-    regularPrice: "$280,000",
+    regularPrice: "$250,000",
     features: [
       "Todo lo incluido en Personal",
       "Acceso para cônjuge",
-      "2 invitaciones mensuales a invitados",
-      "Eventos familiares exclusivos",
     ],
     highlight: false,
   },
@@ -43,14 +39,11 @@ const memberships = [
     price: "$11,830",
     period: "mensual",
     inscription: "$100,000",
-    regularPrice: "$350,000",
+    regularPrice: "$250,000",
     features: [
       "Todo lo incluido en Pareja",
       "Cónyuge + hijos menores 21 años",
-      "Acceso a clases grupales de tennis",
-      "Events infantiles y juveniles",
       "Descuentos en restaurante (25%)",
-      "Cumpleaños especial para hijos",
     ],
     highlight: true,
   },
@@ -59,12 +52,10 @@ const memberships = [
     price: "$24,000",
     period: "mensual",
     inscription: "$150,000",
-    regularPrice: "$600,000",
+    regularPrice: "$250,000",
     features: [
       "Hasta 4 representantes legales",
       "Torneos corporativos incluidos",
-      "Team building events",
-      "Descuentos en restaurante (30%)",
     ],
     highlight: false,
   },
@@ -78,9 +69,7 @@ const juniorMembership = {
   features: [
     "Acceso ilimitado al campo",
     "Green fees preferenciales (25%)",
-    "Acceso a健身房 y alberca",
-    "Events para jóvenes",
-    "Mentoría con jugadores experimentados",
+    "Acceso a gimnasio y alberca",
   ],
 };
 

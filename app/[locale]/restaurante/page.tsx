@@ -29,9 +29,16 @@ const menuLinks = [
   },
 ];
 
-const schedule = [
-  { day: "Miércoles - Lunes", hours: "8:00 AM - 6:00 PM" },
-  { day: "Martes", hours: "Cerrado" },
+const cocinaSchedule = [
+  { days: "Lunes, Miércoles, Jueves", hours: "8:00 AM - 5:00 PM" },
+  { days: "Viernes, Sábado, Domingo", hours: "8:00 AM - 6:00 PM" },
+  { days: "Martes", hours: "Cerrado" },
+];
+
+const barSchedule = [
+  { days: "Lunes, Miércoles, Jueves", hours: "8:00 AM - 6:00 PM" },
+  { days: "Viernes, Sábado, Domingo", hours: "8:00 AM - 7:00 PM" },
+  { days: "Martes", hours: "Cerrado" },
 ];
 
 export default function RestaurantePage() {
@@ -171,14 +178,30 @@ export default function RestaurantePage() {
           <div className="grid md:grid-cols-2 gap-16">
             <div>
               <h3 className="font-playfair text-2xl font-bold text-white mb-6">
-                Horarios del Restaurante
+                Cocina
               </h3>
               <div className="space-y-4">
-                {schedule.map((item, index) => (
+                {cocinaSchedule.map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <Clock className="w-5 h-5 text-[#D4A84B]" />
                     <div>
-                      <p className="text-white font-medium">{item.day}</p>
+                      <p className="text-white font-medium">{item.days}</p>
+                      <p className="text-white/70">{item.hours}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="font-playfair text-2xl font-bold text-white mb-6">
+                Bar
+              </h3>
+              <div className="space-y-4">
+                {barSchedule.map((item, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <Clock className="w-5 h-5 text-[#D4A84B]" />
+                    <div>
+                      <p className="text-white font-medium">{item.days}</p>
                       <p className="text-white/70">{item.hours}</p>
                     </div>
                   </div>

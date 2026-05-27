@@ -18,7 +18,6 @@ const greenFees = [
     features: [
       "Acceso completo al campo de 18 hoyos",
       "Incluye práctica en driving range",
-      "Carro eléctrico incluido",
     ],
   },
   {
@@ -29,7 +28,6 @@ const greenFees = [
     features: [
       "Acceso completo al campo de 18 hoyos",
       "Incluye práctica en driving range",
-      "Carro eléctrico incluido",
     ],
     highlight: true,
   },
@@ -45,8 +43,7 @@ const extras = [
 const promotions = [
   {
     title: "2X1 Todos los Jueves",
-    description:
-      "Jugadores que validate su membrecía vigente reciben green fee gratis para su invitado.",
+    description: "",
     icon: Gift,
   },
 ];
