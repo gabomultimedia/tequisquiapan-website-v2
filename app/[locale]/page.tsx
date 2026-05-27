@@ -43,32 +43,29 @@ const memberships = [
     name: "Personal",
     price: "$9,333",
     period: "/mes",
-    features: ["Acceso ilimitado al campo", "Green fees preferenciales", "Descuentos en restaurante"],
+    features: ["Acceso ilimitado al campo", "Green fees preferenciales"],
     highlight: false,
   },
   {
     name: "Familiar",
     price: "$11,830",
     period: "/mes",
-    features: ["Cónyuge + hijos menores", "Acceso a todas las instalaciones", "Eventos familiares exclusivos"],
+    features: ["Cónyuge + hijos menores 21 años", "Acceso a todas las instalaciones", "Eventos familiares exclusivos"],
     highlight: true,
   },
   {
     name: "Empresarial",
     price: "$24,000",
     period: "/mes",
-    features: ["Hasta 5 representantes", "Salón privado para eventos", "Torneos corporativos"],
+    features: ["Hasta 4 representantes", "Torneos corporativos"],
     highlight: false,
   },
 ];
 
 const galleryImages = [
-  "/images/gallery/gallery-10011.webp",
-  "/images/gallery/gallery-10034.webp",
-  "/images/gallery/gallery-10048.webp",
-  "/images/gallery/gallery-10063.webp",
-  "/images/gallery/gallery-10071.webp",
-  "/images/gallery/gallery-10109.webp",
+  "/images/gallery/WhatsApp Image 2026-05-18 at 3.50.12 PM.jpeg",
+  "/images/gallery/WhatsApp Image 2026-05-18 at 3.50.21 PM.jpeg",
+  "/images/gallery/WhatsApp Image 2026-05-18 at 3.52.00 PM.jpeg",
 ];
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {

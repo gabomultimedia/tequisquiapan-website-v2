@@ -70,17 +70,17 @@
       "personal": {
         "name": "Personal",
         "price": "$9,333",
-        "features": ["Acceso ilimitado al campo", "Invita a un amigo cada mes", "Descuentos en restaurante"]
+        "features": ["Acceso ilimitado al campo", "Invita a un amigo cada mes"]
       },
       "familiar": {
         "name": "Familiar",
         "price": "$11,830",
-        "features": ["Tu familia, siempre bienvenida", "Eventos que crean recuerdos", "Tradiciones que se heredan"]
+        "features": ["Cónyuge + hijos menores 21 años", "Eventos que crean recuerdos", "Tradiciones que se heredan"]
       },
       "corporate": {
         "name": "Empresarial",
         "price": "$24,000",
-        "features": ["Tu equipo, tu campo", "Salón privado para cerrar acuerdos", "Torneos que unen empresas"]
+        "features": ["Tu equipo, tu campo", "Torneos que unen empresas", "Hasta 4 representantes"]
       }
     }
   },

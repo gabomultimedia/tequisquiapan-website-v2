@@ -70,17 +70,17 @@
       "personal": {
         "name": "Personal",
         "price": "$9,333",
-        "features": ["Unlimited course access", "Bring a friend every month", "Restaurant discounts"]
+        "features": ["Unlimited course access", "Bring a friend every month"]
       },
       "familiar": {
         "name": "Family",
         "price": "$11,830",
-        "features": ["Your family, always welcome", "Events that create memories", "Traditions to be passed down"]
+        "features": ["Spouse + children under 21", "Events that create memories", "Traditions to be passed down"]
       },
       "corporate": {
         "name": "Corporate",
         "price": "$24,000",
-        "features": ["Your team, your course", "Private lounge to close deals", "Tournaments that unite companies"]
+        "features": ["Your team, your course", "Tournaments that unite companies", "Up to 4 representatives"]
       }
     }
   },

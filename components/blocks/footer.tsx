@@ -112,20 +112,8 @@ export function Footer({ locale = "es" }: FooterProps) {
                 <span className="text-white/70 text-sm">{locale === "en" ? "Wed-Mon: 7AM-6PM" : "Mi-Lu: 7AM-6PM"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#D4A84B] flex-shrink-0" />
-                <a href="tel:+4142730095" className="text-white/70 hover:text-white text-sm transition-colors">+414 273 00 95</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#D4A84B] flex-shrink-0" />
-                <a href="tel:5561941723" className="text-white/70 hover:text-white text-sm transition-colors">55 6194 1723</a>
-              </li>
-              <li className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-[#D4A84B] flex-shrink-0" />
-                <a href="https://wa.me/525539085548" className="text-white/70 hover:text-white text-sm transition-colors">55 3908 5548</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#D4A84B] flex-shrink-0" />
-                <a href="mailto:contacto@clubtequisquiapan.mx" className="text-white/70 hover:text-white text-sm transition-colors">contacto@clubtequisquiapan.mx</a>
+                <a href="https://wa.me/525539085548" className="text-white/70 hover:text-white text-sm transition-colors">+52 1 55 3908 5548</a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#D4A84B] flex-shrink-0" />

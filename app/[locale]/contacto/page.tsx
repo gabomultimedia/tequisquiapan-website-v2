@@ -16,28 +16,10 @@ const contactInfo = [
     value: "Cantaridas S/N, Club de Golf Tequisquiapan, Tequisquiapan, Qro. CP 76799",
   },
   {
-    icon: Phone,
-    label: "Teléfono del Club",
-    value: "+414 273 00 95",
-    href: "tel:+4142730095",
-  },
-  {
-    icon: Phone,
-    label: "Restaurante",
-    value: "55 6194 1723",
-    href: "tel:5561941723",
-  },
-  {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "55 3908 5548",
+    value: "+52 1 55 3908 5548",
     href: "https://wa.me/525539085548?text=Hola,%20deseo%20mas%20informacion%20sobre%20el%20Club%20de%20Golf",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "contacto@clubtequisquiapan.mx",
-    href: "mailto:contacto@clubtequisquiapan.mx",
   },
   {
     icon: Clock,
@@ -88,7 +70,7 @@ export default function ContactoPage() {
             Estamos para ti
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Visítanos, llámanos o escríbenos. Estamos listos para responder todas
+            Escríbenos por WhatsApp. Estamos listos para responder todas
             tus preguntas.
           </p>
         </div>
