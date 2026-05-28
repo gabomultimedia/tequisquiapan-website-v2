@@ -1,100 +1,128 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { Phone, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Membresías | Acceso ilimitado a todas las instalaciones",
   description:
-    "Membresías del Club de Golf Tequisquiapan. Personal, Familiar y Empresarial. Acceso ilimitado al campo, restaurante, tennis, pádel y más.",
+    "Membresías del Club de Golf Tequisquiapan. Individual, Familiar y Empresarial. Acceso ilimitado al campo, restaurante, tennis, pádel y más.",
 };
 
 const memberships = [
   {
-    name: "Personal",
-    price: "$9,333",
-    period: "mensual",
+    name: "Familiar",
+    code: "A",
+    priceMonthly: "$11,833",
+    priceAnnual: "$142,000",
     inscription: "$100,000",
     regularPrice: "$250,000",
+    highlight: true,
+    features: [
+      "Cónyuge + hijos menores de 21 años",
+      "Acceso ilimitado al campo de golf",
+      "Green fees preferenciales (30% descuento)",
+      "Acceso a gimnasio y alberca",
+      "Eventos familiares exclusivos",
+    ],
+  },
+  {
+    name: "Individual",
+    code: "B1",
+    priceMonthly: "$9,333",
+    priceAnnual: "$112,000",
+    inscription: "$100,000",
+    regularPrice: "$250,000",
+    highlight: false,
     features: [
       "Acceso ilimitado al campo de golf",
       "Green fees preferenciales (30% descuento)",
       "Acceso a gimnasio y alberca",
     ],
-    highlight: false,
   },
   {
     name: "Pareja",
-    price: "$10,430",
-    period: "mensual",
+    code: "B2",
+    priceMonthly: "$10,417",
+    priceAnnual: "$125,000",
     inscription: "$100,000",
     regularPrice: "$250,000",
+    highlight: false,
     features: [
-      "Todo lo incluido en Personal",
+      "Todo lo incluido en Individual",
       "Acceso para cônjuge",
     ],
-    highlight: false,
-  },
-  {
-    name: "Familiar",
-    price: "$11,830",
-    period: "mensual",
-    inscription: "$100,000",
-    regularPrice: "$250,000",
-    features: [
-      "Todo lo incluido en Pareja",
-      "Cónyuge + hijos menores 21 años",
-    ],
-    highlight: true,
-  },
-  {
-    name: "Empresarial",
-    price: "$24,000",
-    period: "mensual",
-    inscription: "$150,000",
-    regularPrice: "$250,000",
-    features: [
-      "Hasta 4 representantes legales",
-      "Torneos corporativos incluidos",
-    ],
-    highlight: false,
   },
 ];
 
-const juniorMembership = {
-  name: "Junior",
-  price: "$35,500",
-  period: "anual",
-  ageRange: "22-30 años",
-  features: [
-    "Acceso ilimitado al campo",
-    "Acceso a gimnasio y alberca",
-  ],
-};
+const specialMemberships = [
+  {
+    name: "Junior",
+    ageRange: "22-30 años",
+    priceMonthly: "$2,958",
+    priceAnnual: "$35,500",
+    features: [
+      "Acceso ilimitado al campo",
+      "Acceso a gimnasio y alberca",
+    ],
+  },
+  {
+    name: "Familiar Hij@ de Socio",
+    ageRange: "3 años",
+    priceMonthly: "—",
+    priceAnnual: "—",
+    features: [
+      "Para hijos de socios activos",
+      "Acceso limitado a instalaciones",
+    ],
+  },
+  {
+    name: "Inactiva",
+    ageRange: "—",
+    priceMonthly: "$2,958",
+    priceAnnual: "$35,500",
+    features: [
+      "Acceso limitado al club",
+      "Beneficio básico",
+    ],
+  },
+];
 
 const paymentDiscounts = [
   {
-    months: "12 meses",
-    discount: "15%",
-    label: "Ahorra más",
-    badge: "MEJOR PRECIO",
-    savings: "$0",
-    description: "Pago anual completo con el máximo descuento"
+    month: "Agosto",
+    discount: "7%",
+    passes: "15 pases de cortesía",
+    highlight: true,
   },
   {
-    months: "6 meses",
-    discount: "10%",
-    label: "Ahorra",
-    badge: "POPULAR",
-    savings: "$0",
-    description: "Plan semestral con descuento significativo"
+    month: "Septiembre",
+    discount: "6%",
+    passes: "14 pases de cortesía",
+    highlight: false,
   },
   {
-    months: "3 meses",
+    month: "Octubre",
     discount: "5%",
-    label: "Ventaja",
-    badge: null,
-    savings: "$0",
-    description: "Descuento por pago trimestral anticipado"
+    passes: "13 pases de cortesía",
+    highlight: false,
+  },
+  {
+    month: "Noviembre",
+    discount: "4%",
+    passes: "12 pases de cortesía",
+    highlight: false,
+  },
+  {
+    month: "Diciembre",
+    discount: "3%",
+    passes: "11 pases de cortesía",
+    highlight: false,
+  },
+  {
+    month: "Enero",
+    discount: "2%",
+    passes: "10 pases de cortesía",
+    highlight: false,
   },
 ];
 
@@ -117,7 +145,7 @@ export default function MembresiasPage() {
         </div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <p className="text-[#D4A84B] tracking-[0.3em] uppercase text-sm mb-4">
-            Membresías
+            Membresías 2026
           </p>
           <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6">
             Tu acceso al<br />mundo CGT
@@ -132,7 +160,7 @@ export default function MembresiasPage() {
       {/* Memberships Grid */}
       <section className="py-24 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {memberships.map((membership, index) => (
               <div
                 key={index}
@@ -147,24 +175,36 @@ export default function MembresiasPage() {
                     Más Popular
                   </span>
                 )}
-                <h3 className="font-playfair text-2xl font-bold mb-2">
+                <div className="text-xs text-[#D4A84B] font-bold mb-2">MODALIDAD {membership.code}</div>
+                <h3 className="font-playfair text-2xl font-bold mb-4">
                   {membership.name}
                 </h3>
-                <div className="mb-4">
-                  <span className="text-3xl font-bold">{membership.price}</span>
-                  <span className={`text-sm ${membership.highlight ? "text-white/70" : "text-[#1A1A1A]/60"}`}>
-                    /{membership.period}
-                  </span>
+
+                {/* Pricing */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex justify-between items-baseline border-b border-white/20 pb-2">
+                    <span className={`text-sm ${membership.highlight ? "text-white/70" : "text-[#1A1A1A]/60"}`}>
+                      Mensual
+                    </span>
+                    <span className="text-2xl font-bold">{membership.priceMonthly}</span>
+                  </div>
+                  <div className="flex justify-between items-baseline">
+                    <span className={`text-sm ${membership.highlight ? "text-white/70" : "text-[#1A1A1A]/60"}`}>
+                      Anual
+                    </span>
+                    <span className="text-xl font-bold">{membership.priceAnnual}</span>
+                  </div>
                 </div>
-                <p className={`text-xs mb-6 ${membership.highlight ? "text-white/60" : "text-[#1A1A1A]/60"}`}>
-                  Inscripción: {membership.inscription}
-                  {membership.regularPrice && ` (Regular: ${membership.regularPrice})`}
+
+                <p className={`text-xs mb-4 ${membership.highlight ? "text-white/60" : "text-[#1A1A1A]/60"}`}>
+                  Inscripción: {membership.inscription} (Regular: {membership.regularPrice})
                 </p>
+
                 <ul className="space-y-3 mb-8">
                   {membership.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-start gap-3 text-sm">
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ${membership.highlight ? "text-[#D4A84B]" : "text-[#D4A84B]"}`}
+                        className="w-5 h-5 flex-shrink-0 text-[#D4A84B]"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -192,44 +232,49 @@ export default function MembresiasPage() {
             ))}
           </div>
 
-          {/* Junior Membership */}
-          <div className="bg-[#F7F2E6] rounded-2xl p-8 max-w-md mx-auto">
-            <div className="flex items-center gap-4 mb-4">
-              <h3 className="font-playfair text-2xl font-bold text-[#0A3622]">
-                {juniorMembership.name}
-              </h3>
-              <span className="bg-[#D4A84B] text-[#0A3622] text-xs font-bold px-3 py-1 rounded-full">
-                {juniorMembership.ageRange}
-              </span>
-            </div>
-            <div className="mb-4">
-              <span className="text-3xl font-bold text-[#0A3622]">{juniorMembership.price}</span>
-              <span className="text-sm text-[#1A1A1A]/60">/{juniorMembership.period}</span>
-            </div>
-            <ul className="space-y-3 mb-6">
-              {juniorMembership.features.map((feature, fIndex) => (
-                <li key={fIndex} className="flex items-start gap-3 text-sm text-[#1A1A1A]/80">
-                  <svg className="w-5 h-5 text-[#D4A84B] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center py-3 rounded-lg font-semibold bg-[#25D366] text-white hover:bg-[#20BD5A] transition-all"
-            >
-              <MessageCircle className="w-4 h-4 inline mr-2" />
-              Solicitar por WhatsApp
-            </a>
+          {/* Special Memberships */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {specialMemberships.map((membership, index) => (
+              <div key={index} className="bg-[#F7F2E6] rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="font-playfair text-xl font-bold text-[#0A3622]">
+                    {membership.name}
+                  </h3>
+                  {membership.ageRange && (
+                    <span className="bg-[#D4A84B] text-[#0A3622] text-xs font-bold px-2 py-1 rounded-full">
+                      {membership.ageRange}
+                    </span>
+                  )}
+                </div>
+                <div className="space-y-1 mb-4">
+                  {membership.priceMonthly !== "—" && (
+                    <p className="text-sm text-[#1A1A1A]/70">
+                      Mensual: <span className="font-bold text-[#0A3622]">{membership.priceMonthly}</span>
+                    </p>
+                  )}
+                  {membership.priceAnnual !== "—" && (
+                    <p className="text-sm text-[#1A1A1A]/70">
+                      Anual: <span className="font-bold text-[#0A3622]">{membership.priceAnnual}</span>
+                    </p>
+                  )}
+                </div>
+                <ul className="space-y-2">
+                  {membership.features.map((feature, fIndex) => (
+                    <li key={fIndex} className="flex items-start gap-2 text-sm text-[#1A1A1A]/80">
+                      <svg className="w-4 h-4 text-[#D4A84B] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Payment Discounts - Super Visual Banner */}
+      {/* Payment Discounts - Pronto Pago 2026 */}
       <section className="py-20 bg-gradient-to-br from-[#0A3622] via-[#14512D] to-[#0A3622] relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
@@ -241,78 +286,103 @@ export default function MembresiasPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-[#D4A84B] text-[#0A3622] text-xs font-bold px-4 py-2 rounded-full mb-4">
-              ⚡ DESCUENTOS POR PRONTO PAGO
+              ⚡ DESCUENTOS POR PRONTO PAGO 2026
             </span>
             <h3 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">
-              ¡Paga menos, disfruta más!
+              Pagos anticipados
             </h3>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
-              Elige tu plan de pago anticipado y obtén beneficios exclusivos al instante
+              Estas tarifas aplican a los pagos anticipados realizados entre agosto 2025 y enero 2026.
+              Incluye pases promocionales por mes.
             </p>
           </div>
 
-          {/* Discount Cards */}
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Discount Cards - Grid */}
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
             {paymentDiscounts.map((discount, index) => (
               <div
                 key={index}
-                className={`relative rounded-3xl p-8 text-center transform transition-all hover:scale-105 ${
-                  discount.badge === "MEJOR PRECIO"
+                className={`relative rounded-2xl p-6 text-center transform transition-all hover:scale-105 ${
+                  discount.highlight
                     ? "bg-gradient-to-br from-[#D4A84B] to-[#c49a3f] text-[#0A3622] shadow-2xl shadow-[#D4A84B]/30"
-                    : discount.badge === "POPULAR"
-                    ? "bg-white/15 backdrop-blur-sm text-white border-2 border-[#D4A84B]"
-                    : "bg-white/10 backdrop-blur-sm text-white"
+                    : "bg-white/15 backdrop-blur-sm text-white border border-white/10"
                 }`}
               >
-                {discount.badge && (
-                  <div className={`absolute -top-4 left-1/2 -translate-x-1/2 ${
-                    discount.badge === "MEJOR PRECIO"
-                      ? "bg-[#0A3622] text-white"
-                      : "bg-[#D4A84B] text-[#0A3622]"
-                  } text-xs font-bold px-4 py-2 rounded-full shadow-lg`}>
-                    {discount.badge}
+                {discount.highlight && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0A3622] text-white text-[10px] font-bold px-3 py-1 rounded-full">
+                    ¡MEJOR MOMENTO!
                   </div>
                 )}
 
-                <div className={`text-6xl font-black mb-2 ${
-                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]" : "text-[#D4A84B]"
-                }`}>
+                <div className={`text-3xl font-black mb-1 ${discount.highlight ? "text-[#0A3622]" : "text-[#D4A84B]"}`}>
                   {discount.discount}
                 </div>
-                <div className={`text-sm font-semibold uppercase tracking-wider mb-2 ${
-                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]/70" : "text-white/60"
-                }`}>
-                  de descuento
+                <div className={`text-xs uppercase tracking-wider mb-3 ${discount.highlight ? "text-[#0A3622]/70" : "text-white/60"}`}>
+                  descuento
                 </div>
-                <div className={`text-2xl font-bold mb-2 ${
-                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]" : "text-white"
-                }`}>
-                  {discount.months}
+                <div className={`text-lg font-bold mb-2 ${discount.highlight ? "text-[#0A3622]" : "text-white"}`}>
+                  {discount.month}
                 </div>
-                <p className={`text-sm mb-6 ${
-                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]/80" : "text-white/60"
+                <div className={`text-xs px-2 py-1 rounded-full inline-block ${
+                  discount.highlight ? "bg-[#0A3622] text-white" : "bg-[#D4A84B] text-[#0A3622]"
                 }`}>
-                  {discount.description}
-                </p>
-
-                <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold ${
-                  discount.badge === "MEJOR PRECIO"
-                    ? "bg-[#0A3622] text-white"
-                    : "bg-[#D4A84B] text-[#0A3622]"
-                }`}>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {discount.label}
+                  🎁 {discount.passes}
                 </div>
               </div>
             ))}
           </div>
 
+          {/* Price Table */}
+          <div className="mt-16 bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+            <h4 className="font-playfair text-2xl font-bold text-white text-center mb-8">
+              Cuotas 2026 por modalidad
+            </h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-white">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-[#D4A84B] font-bold">Modalidad</th>
+                    <th className="text-center py-3 px-4 text-[#D4A84B] font-bold">Anual</th>
+                    <th className="text-center py-3 px-4 text-[#D4A84B] font-bold">Mensual</th>
+                    <th className="text-center py-3 px-4 text-[#D4A84B] font-bold">Agosto</th>
+                    <th className="text-center py-3 px-4 text-[#D4A84B] font-bold">Sept.</th>
+                    <th className="text-center py-3 px-4 text-[#D4A84B] font-bold">Oct.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/10 bg-[#D4A84B]/10">
+                    <td className="py-3 px-4 font-semibold">Familiar (A)</td>
+                    <td className="text-center py-3 px-4">$142,000</td>
+                    <td className="text-center py-3 px-4">$11,833</td>
+                    <td className="text-center py-3 px-4 text-[#D4A84B]">$132,060</td>
+                    <td className="text-center py-3 px-4">$133,480</td>
+                    <td className="text-center py-3 px-4">$134,900</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3 px-4 font-semibold">Individual (B1)</td>
+                    <td className="text-center py-3 px-4">$112,000</td>
+                    <td className="text-center py-3 px-4">$9,333</td>
+                    <td className="text-center py-3 px-4 text-[#D4A84B]">$104,160</td>
+                    <td className="text-center py-3 px-4">$105,280</td>
+                    <td className="text-center py-3 px-4">$106,400</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3 px-4 font-semibold">Pareja (B2)</td>
+                    <td className="text-center py-3 px-4">$125,000</td>
+                    <td className="text-center py-3 px-4">$10,417</td>
+                    <td className="text-center py-3 px-4 text-[#D4A84B]">$116,250</td>
+                    <td className="text-center py-3 px-4">$117,500</td>
+                    <td className="text-center py-3 px-4">$118,750</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           {/* Bottom note */}
           <div className="text-center mt-12">
             <p className="text-white/50 text-sm">
-              * Los descuentos se aplican sobre la cuota mensual. Consulta términos y condiciones.
+              * Los descuentos incluyen pases de cortesía según el mes de pago. Consulta términos y condiciones.
             </p>
           </div>
         </div>
