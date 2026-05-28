@@ -72,9 +72,30 @@ const juniorMembership = {
 };
 
 const paymentDiscounts = [
-  { months: "12 meses", discount: "15% descuento" },
-  { months: "6 meses", discount: "10% descuento" },
-  { months: "3 meses", discount: "5% descuento" },
+  {
+    months: "12 meses",
+    discount: "15%",
+    label: "Ahorra más",
+    badge: "MEJOR PRECIO",
+    savings: "$0",
+    description: "Pago anual completo con el máximo descuento"
+  },
+  {
+    months: "6 meses",
+    discount: "10%",
+    label: "Ahorra",
+    badge: "POPULAR",
+    savings: "$0",
+    description: "Plan semestral con descuento significativo"
+  },
+  {
+    months: "3 meses",
+    discount: "5%",
+    label: "Ventaja",
+    badge: null,
+    savings: "$0",
+    description: "Descuento por pago trimestral anticipado"
+  },
 ];
 
 export default function MembresiasPage() {
@@ -208,19 +229,91 @@ export default function MembresiasPage() {
         </div>
       </section>
 
-      {/* Payment Discounts */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="font-playfair text-2xl font-bold text-[#0A3622] mb-8">
-            Descuentos por pago anticipado
-          </h3>
-          <div className="flex flex-wrap justify-center gap-8">
+      {/* Payment Discounts - Super Visual Banner */}
+      <section className="py-20 bg-gradient-to-br from-[#0A3622] via-[#14512D] to-[#0A3622] relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[#D4A84B] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4A84B] rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="inline-block bg-[#D4A84B] text-[#0A3622] text-xs font-bold px-4 py-2 rounded-full mb-4">
+              ⚡ DESCUENTOS POR PRONTO PAGO
+            </span>
+            <h3 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">
+              ¡Paga menos, disfruta más!
+            </h3>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+              Elige tu plan de pago anticipado y obtén beneficios exclusivos al instante
+            </p>
+          </div>
+
+          {/* Discount Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
             {paymentDiscounts.map((discount, index) => (
-              <div key={index} className="bg-[#FAF8F5] rounded-xl px-8 py-4">
-                <p className="font-semibold text-[#0A3622]">{discount.months}</p>
-                <p className="text-[#D4A84B] font-bold">{discount.discount}</p>
+              <div
+                key={index}
+                className={`relative rounded-3xl p-8 text-center transform transition-all hover:scale-105 ${
+                  discount.badge === "MEJOR PRECIO"
+                    ? "bg-gradient-to-br from-[#D4A84B] to-[#c49a3f] text-[#0A3622] shadow-2xl shadow-[#D4A84B]/30"
+                    : discount.badge === "POPULAR"
+                    ? "bg-white/15 backdrop-blur-sm text-white border-2 border-[#D4A84B]"
+                    : "bg-white/10 backdrop-blur-sm text-white"
+                }`}
+              >
+                {discount.badge && (
+                  <div className={`absolute -top-4 left-1/2 -translate-x-1/2 ${
+                    discount.badge === "MEJOR PRECIO"
+                      ? "bg-[#0A3622] text-white"
+                      : "bg-[#D4A84B] text-[#0A3622]"
+                  } text-xs font-bold px-4 py-2 rounded-full shadow-lg`}>
+                    {discount.badge}
+                  </div>
+                )}
+
+                <div className={`text-6xl font-black mb-2 ${
+                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]" : "text-[#D4A84B]"
+                }`}>
+                  {discount.discount}
+                </div>
+                <div className={`text-sm font-semibold uppercase tracking-wider mb-2 ${
+                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]/70" : "text-white/60"
+                }`}>
+                  de descuento
+                </div>
+                <div className={`text-2xl font-bold mb-2 ${
+                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]" : "text-white"
+                }`}>
+                  {discount.months}
+                </div>
+                <p className={`text-sm mb-6 ${
+                  discount.badge === "MEJOR PRECIO" ? "text-[#0A3622]/80" : "text-white/60"
+                }`}>
+                  {discount.description}
+                </p>
+
+                <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold ${
+                  discount.badge === "MEJOR PRECIO"
+                    ? "bg-[#0A3622] text-white"
+                    : "bg-[#D4A84B] text-[#0A3622]"
+                }`}>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  {discount.label}
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Bottom note */}
+          <div className="text-center mt-12">
+            <p className="text-white/50 text-sm">
+              * Los descuentos se aplican sobre la cuota mensual. Consulta términos y condiciones.
+            </p>
           </div>
         </div>
       </section>
