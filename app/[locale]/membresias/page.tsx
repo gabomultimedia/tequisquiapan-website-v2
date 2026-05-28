@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Gift, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Membresías | Acceso ilimitado a todas las instalaciones",
@@ -266,7 +266,7 @@ export default function MembresiasPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-[#D4A84B] text-[#0A3622] text-xs font-bold px-4 py-2 rounded-full mb-4">
-              ⚡ DESCUENTOS POR PRONTO PAGO 2026
+              <Zap className="w-4 h-4" /> DESCUENTOS POR PRONTO PAGO 2026
             </span>
             <h3 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">
               Pagos anticipados
@@ -306,7 +306,8 @@ export default function MembresiasPage() {
                 <div className={`text-xs px-2 py-1 rounded-full inline-block ${
                   discount.highlight ? "bg-[#0A3622] text-white" : "bg-[#D4A84B] text-[#0A3622]"
                 }`}>
-                  🎁 {discount.passes}
+                  <Gift className={`w-3 h-3 ${discount.highlight ? "text-[#0A3622]" : "text-[#D4A84B]"}`} />
+                  {discount.passes}
                 </div>
               </div>
             ))}
