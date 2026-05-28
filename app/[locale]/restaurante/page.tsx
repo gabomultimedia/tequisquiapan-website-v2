@@ -36,8 +36,9 @@ const cocinaSchedule = [
 ];
 
 const barSchedule = [
+  { days: "Lunes, Miércoles", hours: "8:00 AM - 6:00 PM" },
   { days: "Jueves, Viernes, Sábado, Domingo", hours: "8:00 AM - 7:00 PM" },
-  { days: "Lunes, Martes, Miércoles", hours: "Cerrado" },
+  { days: "Martes", hours: "Cerrado" },
 ];
 
 export default function RestaurantePage() {

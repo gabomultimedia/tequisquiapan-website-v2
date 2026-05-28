@@ -65,26 +65,6 @@ const specialMemberships = [
       "Acceso a gimnasio y alberca",
     ],
   },
-  {
-    name: "Familiar Hij@ de Socio",
-    ageRange: "3 años",
-    priceMonthly: "—",
-    priceAnnual: "—",
-    features: [
-      "Para hijos de socios activos",
-      "Acceso limitado a instalaciones",
-    ],
-  },
-  {
-    name: "Inactiva",
-    ageRange: "—",
-    priceMonthly: "$2,958",
-    priceAnnual: "$35,500",
-    features: [
-      "Acceso limitado al club",
-      "Beneficio básico",
-    ],
-  },
 ];
 
 const paymentDiscounts = [
