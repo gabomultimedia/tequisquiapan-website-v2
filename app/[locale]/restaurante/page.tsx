@@ -36,7 +36,8 @@ const cocinaSchedule = [
 ];
 
 const barSchedule = [
-  { days: "Lunes, Miércoles, Jueves", hours: "8:00 AM - 6:00 PM" },
+  { days: "Lunes, Miércoles", hours: "8:00 AM - 6:00 PM" },
+  { days: "Jueves", hours: "8:00 AM - 7:00 PM" },
   { days: "Viernes, Sábado, Domingo", hours: "8:00 AM - 7:00 PM" },
   { days: "Martes", hours: "Cerrado" },
 ];
@@ -79,15 +80,13 @@ export default function RestaurantePage() {
                 Sabores que crean memorias
               </h2>
               <p className="text-[#1A1A1A]/70 text-lg leading-relaxed mb-6">
-                En nuestro restaurante, cada plato es una celebración de los sabores
-                auténticos de México, preparado con ingredientes frescos de la región.
-                Nuestro chef ejecutivo y su equipo trabajan incansablemente para crear
-                experiencias culinarias que se quedan en la memoria.
+                En nuestro restaurante, cada platillo es una celebración de los sabores auténticos de México, preparado con ingredientes frescos de la región.
+              </p>
+              <p className="text-[#1A1A1A]/70 text-lg leading-relaxed mb-6">
+                Nuestro equipo de cocina y servicio trabaja con pasión y dedicación para crear experiencias culinarias que permanezcan en la memoria de nuestros visitantes.
               </p>
               <p className="text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
-                Ya sea que busques un desayuno tranquilo con vista al campo, una comida
-                de negocios, o una cena romántica bajo las estrellas, nuestro equipo
-                está listo para hacer de tu visita un momento especial.
+                Ya sea que busques un desayuno tranquilo con vista al campo, una comida de negocios o una agradable experiencia gastronómica en un ambiente acogedor, nuestro equipo está listo para hacer de tu visita un momento especial.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
